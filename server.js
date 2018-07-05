@@ -19,7 +19,7 @@ app.get("/:filename", function(req, resp) {
 });
 */
 
-// started
-app.listen(4444);
-
-console.log("server started");
+const PORT = process.env.PORT || 4444;
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}...`);
+});
